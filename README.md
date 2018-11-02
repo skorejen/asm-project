@@ -16,7 +16,7 @@
    
    Table of content
 
-* Abstract	
+* Abstract
 1. Introduction	
 2. Requirements	
    2.1 Functional Requirements	
