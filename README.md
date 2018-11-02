@@ -38,11 +38,11 @@
 __Abstract__
 
 
-**An abstract is a shortened version of the report and should contain all information necessary for the reader to determine:**
-**1.	What are the aim and objectives of the project**
-**2.	What are the main technical choices**
-**3.	What are the results**
-**Frequently, readers of a report will only read the abstract, choosing to read at length those reports that are most interesting to them. For this reason, and because abstracts are frequently made available to engineers by various computer abstracting services, this section should be written carefully and succinctly to have the greatest impact in as few words as possible.**
-**Although it appears as the first section in a paper, most report writers write the abstract section last.
-Cf. (Dawson 2009, p.195).**
+*An abstract is a shortened version of the report and should contain all information necessary for the reader to determine:*
+*1.	What are the aim and objectives of the project*
+*2.	What are the main technical choices*
+*3.	What are the results*
+*Frequently, readers of a report will only read the abstract, choosing to read at length those reports that are most interesting to them. For this reason, and because abstracts are frequently made available to engineers by various computer abstracting services, this section should be written carefully and succinctly to have the greatest impact in as few words as possible.*
+*Although it appears as the first section in a paper, most report writers write the abstract section last.
+Cf. (Dawson 2009, p.195).*
 
