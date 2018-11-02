@@ -16,7 +16,7 @@
    
    Table of content
 
-Abstract	iv
+* Abstract	iv
 * 1	Introduction	1
 * 2	Requirements	2
  * 2.1	Functional Requirements	2
