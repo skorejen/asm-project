@@ -68,3 +68,12 @@ Remember: You must ensure a clear connection between sections in the project rep
 
 1. The device should emit sound if it gets close to the object
 2.	The sound emission frequency rate should be dependent on the distance from the object
+
+# __2.2	Non-Functional Requirements__
+
+1.	The device should be built using Arduino AVR and basic components
+2.	The device should be programmed using Assembly language
+
+# __3	Analysis__
+
+In the analysis part we discuss the work of the device on the conceptual level. We refer to UML diagrams and class discussions in order to get a better overview of how the device should later be designed and implemented.
