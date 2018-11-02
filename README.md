@@ -60,3 +60,11 @@ State delimitations relevant for your project in the introduction. Delimitations
 The last sentences of the introduction should be an overview of the sections to follow. This will be a good transition to the next sections.
 
 Remember: You must ensure a clear connection between sections in the project report, from Project Description, Requirements, Analysis, Design, Implementation to Test. This means that everything that is implemented can be found in design, everything that is designed is based on the analysis, and anything that is found in analysis has a clear link to requirements, etc.
+
+
+# __2	Requirements__
+
+# __2.1 Functional requirements__
+
+1. The device should emit sound if it gets close to the object
+2.	The sound emission frequency rate should be dependent on the distance from the object
