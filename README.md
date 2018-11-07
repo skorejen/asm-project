@@ -64,12 +64,12 @@ Remember: You must ensure a clear connection between sections in the project rep
 
 # __2	Requirements__
 
-# __2.1 Functional requirements__
+### __2.1 Functional requirements__
 
 1. The device should emit sound if it gets close to the object
 2.	The sound emission frequency rate should be dependent on the distance from the object
 
-# __2.2	Non-Functional Requirements__
+### __2.2	Non-Functional Requirements__
 
 1.	The device should be built using Arduino AVR and basic components
 2.	The device should be programmed using Assembly language
