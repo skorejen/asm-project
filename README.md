@@ -99,6 +99,79 @@ After getting into the first state, Wait For Trigger, the Sensor waits until it 
 # __4	Design__
 
 The purpose of the design section is to outline HOW the system is structured; i.e. to transform the artefacts of the analysis into a model that can be implemented. The design section is relevant for the programmer, whereas the analysis is relevant for the stakeholder.
+
+
 Elements that may be relevant in this section:
+
+*Architecture: Find architecture patterns here (Leszek Maciaszek 2004, chap.9).
+*Technologies: Describe technologies used, also alternative technologies. Argue for choice of technology according to the project aim.
+*Design Patterns: Describe which design patterns (GoF (Gamma et al. 2002) etc.) you are using and why.
+*Class Diagrams
+*Interaction Diagrams
+*UI design choices
+*Data models, persistence, etc.
+
+
+You must explain all diagrams in the report. These diagrams including descriptions are the blueprints for the implementation.
+Hint: One way to figure out which objects/classes are needed in the design is to apply the General Responsibility Assignment Software Patterns/principles (GRASP) (Larman 2004, chap.17).
+Hint: Consider how to design your system to make it testable.
+
+
+# __5	Implementation__
+
+The purpose of the implementation section is to explain interesting code snippets. An idea is to explain the complete path through your system from UI to database etc.
+Remember that your implementation must be consistent with your design (Larman 2004, chap.20).
+Which standard libraries are used? How are design patterns implemented, etc.
+Hint: Implement your code in a testable manner.
+ 
+# __6	Test__
+
+The purpose of the test section is to document the result of your testing; to verify if the content of the requirements section has been fulfilled. How is the system tested, which strategy has been used; e.g. White Box (Unit Test), Black Box, etc.
+
+
+# __6.1	Test Specifications__
+
+For functional requirements, test specifications must be listed. These test specifications can be described as soon as the functional requirements have been completed (Use Cases including descriptions).
+
+
+IEEE can be used as a template for test specification (IEEE Computer Society 2008). VIA Library can give you access to this standard.
+
+
+# __7	Results and Discussion__
+
+The purpose of the results and discussion section is to present the outcome and achieved results of the project.
+
+
+# __8	Conclusions__
+
+The purpose of the conclusion section is to compile the results from each section in the report. What is the conclusion? Did the project fulfil the requirements? Etc.
+
+
+You can only comment on report contents, no new topics or content can be introduced in this section.
+
+
+
+# __9	Project future__
+
+Reflect on your project from a technical viewpoint and describe what you would change if you could.
+
+
+Suggest how the project could be improved or made ready for production. Discuss scalability, suggest possible spin offs, what is needed, missing, etc.?
+
+
+
+# __10	Sources of information__
+
+
+# __11	Appendices__
+
+The purpose of your appendices is to provide extra information to the expert reader. List the appendices in order of mention.
+Examples of appendices
+•	Project Description
+•	User Guide
+•	Source code – source documentation
+•	Diagrams
+•	Data sheets
+•	Etc.
 
 
