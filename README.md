@@ -82,4 +82,4 @@ In the analysis part we discuss the work of the device on the conceptual level. 
 
 We start our analysis with discussing the workflow of the machine.
 
-![Alt Text](https://imgur.com/a/bN7IshQ)
+![Alt Text](images/Picture1.png)
