@@ -77,3 +77,9 @@ Remember: You must ensure a clear connection between sections in the project rep
 # __3	Analysis__
 
 In the analysis part we discuss the work of the device on the conceptual level. We refer to UML diagrams and class discussions in order to get a better overview of how the device should later be designed and implemented.
+
+# __3. 1.1	State-machine diagrams__
+
+We start our analysis with discussing the workflow of the machine.
+
+![Alt Text](https://imgur.com/a/bN7IshQ)
