@@ -83,3 +83,22 @@ In the analysis part we discuss the work of the device on the conceptual level. 
 We start our analysis with discussing the workflow of the machine.
 
 ![Alt Text](images/Picture1.png)
+
+            Figure 1 Distance Detector UML State-Machine Diagram
+            
+The above diagram shows us the paths device can take after it’s turned on. It starts with the Detecting state, which is responsible for detection initiations. The following state is Check Distance, which verifies the distance between the object and device. If the distance is bigger than fifty centimetres, the state goes back to Detecting. On the other hand if it is smaller than fifty centimetres the state changes to Emit Sound. 
+
+We then dive more deeply into the first of the above states – Detecting. 
+
+![Alt Text](images/Picture2.png)
+
+            Figure 2 Ultrasonic Sensor UML State-Machine Diagram
+            
+After getting into the first state, Wait For Trigger, the Sensor waits until it gets a pulse of at least 10uS. After receiving the triggering pulse, the state changes to Send Pulse, which will send a ultrasonic pulse and wait for the response. If the pulse doesn’t comes back, the state comes back to Wait For Trigger, otherwise it forwards to Out High For Time, which will send a high level output for the duration of time from sending ultrasonic pulse to returning.
+
+# __4	Design__
+
+The purpose of the design section is to outline HOW the system is structured; i.e. to transform the artefacts of the analysis into a model that can be implemented. The design section is relevant for the programmer, whereas the analysis is relevant for the stakeholder.
+Elements that may be relevant in this section:
+
+
