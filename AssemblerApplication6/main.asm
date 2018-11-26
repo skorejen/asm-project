@@ -14,11 +14,7 @@ JMP MAIN
  .ORG 0x02 ; vector interrupt for INT0 = 0x02
 	call int_detect_wave_from_sensor
 
-
-	;----- start main
-		.ORG 0x100 ; ommit first 100 addresses left for interrupts
-	main :
-
+.ORG 0x100 ; ommit first 100 addresses left for interrupts
 	LDI R16, HIGH(RAMEND)
 	OUT SPH, R16
 	LDI R16, LOW(RAMEND)
@@ -30,6 +26,7 @@ JMP MAIN
 	ldi r16, 0x00 
 	out DDRD, r16 ; port D input
 	
+
 	ldi r16, 0x01
 	STS EICRA, r16 ; make INT0 rising edge triggered
 	clr r16
@@ -39,6 +36,9 @@ JMP MAIN
 	SEI ; enable interrupts
 	clr r16
 
+
+	;----- start main
+	main :
 	ldi r16, 1<<PA0
 	out PORTA, r16 // Send HIGH on PA0 to start the detect and PROBABLY start interrupt
 	ldi r16, 0
