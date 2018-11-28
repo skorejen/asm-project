@@ -37,7 +37,7 @@
 
 __Abstract__
 
-_ This project involves a detailed introduction through the development stages of the Distance detector, that involves audio feedack. The process started with making the concept of how our device is going to work, based on our working kit which is adruino starting pack. The next step was to write a requirements list and optimize it regarding ATMEGA 2560 possibilities. Based on our requirements list we made our diagrams so we can rely on them to write the code which was written in AVR assembly. After testing our code and analysing its behaviour we tested every possible overflow or errors based on requirements list, we edited it so we do not get out of reqiorements bounds._
+_ This project involves a detailed introduction through the development stages of the Distance detector, that involves audio feedack. The process started with making the concept of how our device is going to work, based on our working kit which is adruino starting pack. The next step was to write a requirements list and optimize it regarding ATMEGA 2560 possibilities. Based on our requirements list we made our diagrams so we can rely on them to write the code which was written in AVR assembly. After testing our code and analysing its behaviour we tested every possible overflow or errors based on requirements list, we edited it so we do not get out of reqiorements bounds. _
 
 
 # __1 Introduction__
