@@ -37,16 +37,7 @@
 
 __Abstract__
 
-
-*An abstract is a shortened version of the report and should contain all information necessary for the reader to determine:*
-* *1.	What are the aim and objectives of the project*
-* *2.	What are the main technical choices*
-* *3.	What are the results*
-
-
-*Frequently, readers of a report will only read the abstract, choosing to read at length those reports that are most interesting to them. For this reason, and because abstracts are frequently made available to engineers by various computer abstracting services, this section should be written carefully and succinctly to have the greatest impact in as few words as possible.*
-*Although it appears as the first section in a paper, most report writers write the abstract section last.
-Cf. (Dawson 2009, p.195).*
+This project involves a detailed introduction through the development stages of the Distance detector, that involves audio feedack. The process started with making the concept of how our device is going to work, based on our working kit which is adruino starting pack. The next step was to write a requirements list and optimize it regarding ATMEGA 2560 possibilities. Based on our requirements list we made our diagrams so we can rely on them to write the code which was written in AVR assembly. After testing our code and analysing its behaviour we tested every possible overflow or errors based on requirements list, we edited it so we do not get out of reqiorements bounds.
 
 
 # __1 Introduction__
