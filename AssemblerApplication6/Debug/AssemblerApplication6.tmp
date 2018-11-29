@@ -22,10 +22,17 @@
   <FILE>AssemblerApplication6.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <MAIN><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>17</LINE></MAIN>
-  <int_detect_wave_from_sensor><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>73</LINE></int_detect_wave_from_sensor>
+  <start><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>18</LINE></start>
+  <int_detect_wave_from_sensor><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>68</LINE></int_detect_wave_from_sensor>
+  <main><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>42</LINE></main>
   <delay_detection_60ms><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>55</LINE></delay_detection_60ms>
-  <again><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>58</LINE></again>
+  <again1><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>58</LINE></again1>
   <again2><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>62</LINE></again2>
+  <loop_check_PA0><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>80</LINE></loop_check_PA0>
+  <quit_interrupt><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>141</LINE></quit_interrupt>
+  <delay_PA2_HIGH><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>106</LINE></delay_PA2_HIGH>
+  <again_HIGH><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>110</LINE></again_HIGH>
+  <delay_PA2_LOW><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>125</LINE></delay_PA2_LOW>
+  <again_LOW><FILE>C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm</FILE><LINE>129</LINE></again_LOW>
  </LABELS>
 </ASSEMBLER_INFO>

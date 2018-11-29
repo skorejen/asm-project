@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm Sun Nov 25 20:02:41 2018
+AVRASM ver. 2.2.7  C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm Wed Nov 28 19:27:41 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -1359,8 +1359,15 @@ EQU  URXC3addr    0000006c
 EQU  UDRE3addr    0000006e
 EQU  UTXC3addr    00000070
 EQU  INT_VECTORS_SIZE 00000072
-CSEG MAIN         00000004
-CSEG int_detect_wave_from_sensor 00000121
-CSEG delay_detection_60ms 00000119
-CSEG again        0000011a
-CSEG again2       0000011d
+CSEG start        00000004
+CSEG int_detect_wave_from_sensor 00000024
+CSEG main         00000015
+CSEG delay_detection_60ms 0000001d
+CSEG again1       0000001e
+CSEG again2       00000021
+CSEG loop_check_PA0 0000002f
+CSEG quit_interrupt 0000005e
+CSEG delay_PA2_HIGH 00000043
+CSEG again_HIGH   00000046
+CSEG delay_PA2_LOW 00000052
+CSEG again_LOW    00000055

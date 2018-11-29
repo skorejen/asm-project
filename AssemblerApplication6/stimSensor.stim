@@ -1,0 +1,6 @@
+$repeat 1
+    PIND = 0x01
+    #2
+	PIND = 0x00
+	#2
+$endrep
