@@ -58,7 +58,7 @@ start :
 	again1:
 	dec r17 ; 1 c
 	brne again1 ; 2c
-	ldi r17, 80
+	ldi r17, 40
 	again2:
 	dec r17
 	brne again2
@@ -72,7 +72,7 @@ start :
 
 	ldi r20, 0b00000000 ; normal mode, int clk;
 	sts TCCR1A, r20		
-	ldi r20, 0b00000101 ; prescaler /1024
+	ldi r20, 0b00000011 ; prescaler /1024
 	sts TCCR1B, r20
 	ldi r20, 0
 	sts TCCR1C, r20

@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm Wed Nov 28 19:27:41 2018
+AVRASM ver. 2.2.7  C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerApplication6\AssemblerApplication6\main.asm Fri Nov 30 13:16:56 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m2560def.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m2560def.inc'
@@ -1901,7 +1901,7 @@ AVRASM ver. 2.2.7  C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerA
                                  	again1:
 00001e 951a                      	dec r17 ; 1 c
 00001f f7f1                      	brne again1 ; 2c
-000020 e510                      	ldi r17, 80
+000020 e218                      	ldi r17, 40
                                  	again2:
 000021 951a                      	dec r17
 000022 f7f1                      	brne again2
@@ -1915,7 +1915,7 @@ AVRASM ver. 2.2.7  C:\Users\Michal Ciebien\Documents\Atmel Studio\7.0\AssemblerA
                                  
 000026 e040                      	ldi r20, 0b00000000 ; normal mode, int clk;
 000027 9340 0080                 	sts TCCR1A, r20		
-000029 e045                      	ldi r20, 0b00000101 ; prescaler /1024
+000029 e043                      	ldi r20, 0b00000011 ; prescaler /1024
 00002a 9340 0081                 	sts TCCR1B, r20
 00002c e040                      	ldi r20, 0
 00002d 9340 0082                 	sts TCCR1C, r20
