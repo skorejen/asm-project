@@ -42,6 +42,8 @@ __Abstract__
 
 # __1 Introduction__
 
+@ !--------Mihai Tirtara -------!
+
 The purpose of the introduction is to provide background information and set the scene for your project. Within which business or organization are you doing the project? Who are the stakeholders and who is the customer?
 The background information is adapted from your project description where you have already described the problem domain. Describe the current situation and existing context. Your statements must be supported by references to reliable and relevant sources. 
 
@@ -67,6 +69,8 @@ Remember: You must ensure a clear connection between sections in the project rep
 
 # __3	Analysis__
 
+@ !--------Cristian Cuba -------!
+
 In the analysis part we discuss the work of the device on the conceptual level. We refer to UML diagrams and class discussions in order to get a better overview of how the device should later be designed and implemented.
 
 # __3. 1.1	State-machine diagrams__
@@ -89,6 +93,8 @@ After getting into the first state, Wait For Trigger, the Sensor waits until it 
 
 # __4	Design__
 
+@ !--------Michal Ciebien -------!
+
 The purpose of the design section is to outline HOW the system is structured; i.e. to transform the artefacts of the analysis into a model that can be implemented. The design section is relevant for the programmer, whereas the analysis is relevant for the stakeholder.
 
 
@@ -110,6 +116,7 @@ Hint: Consider how to design your system to make it testable.
 
 # __5	Implementation__
 
+@ !-------- Michal Ciebien -------!
 The purpose of the implementation section is to explain interesting code snippets. An idea is to explain the complete path through your system from UI to database etc.
 Remember that your implementation must be consistent with your design (Larman 2004, chap.20).
 Which standard libraries are used? How are design patterns implemented, etc.
@@ -117,15 +124,9 @@ Hint: Implement your code in a testable manner.
  
 # __6	Test__
 
+@ !-------- Nikita Roskovs -------!
+
 The purpose of the test section is to document the result of your testing; to verify if the content of the requirements section has been fulfilled. How is the system tested, which strategy has been used; e.g. White Box (Unit Test), Black Box, etc.
-
-
-# __6.1	Test Specifications__
-
-For functional requirements, test specifications must be listed. These test specifications can be described as soon as the functional requirements have been completed (Use Cases including descriptions).
-
-
-IEEE can be used as a template for test specification (IEEE Computer Society 2008). VIA Library can give you access to this standard.
 
 
 # __7	Results and Discussion__
@@ -144,6 +145,8 @@ You can only comment on report contents, no new topics or content can be introdu
 
 # __9	Project future__
 
+@ !-------- Nikita Roskovs -------!
+
 Reflect on your project from a technical viewpoint and describe what you would change if you could.
 
 
@@ -152,6 +155,8 @@ Suggest how the project could be improved or made ready for production. Discuss 
 
 
 # __10	Sources of information__
+
+@ !-------- Michal CIebien -------!
 
 
 # __11	Appendices__
