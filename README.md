@@ -95,7 +95,29 @@ After getting into the first state, Wait For Trigger, the Sensor waits until it 
 
 @ !--------Michal Ciebien -------!
 
-The purpose of the design section is to outline HOW the system is structured; i.e. to transform the artefacts of the analysis into a model that can be implemented. The design section is relevant for the programmer, whereas the analysis is relevant for the stakeholder.
+The device design was based on previously made diagrams and discussions. The design was split into different parts which will further be highlited in this chapter. 
+
+The design of the device has begun with defining the needed components for building the device. This included:
+- AVR Buzzer
+- Ultrasonic Ranging Module HC - SR04
+- Breadboard
+- AVR ATmega2560 microcontroller
+- cables.
+
+The decision to use interrupts (for avr input from sensor) and timers partly define the final components connections, as well as the, PINs in the controller that the components have to be connected to. The decision has been made to use:
+- Timer1/Counter - for counting the wave length of the sensor
+- External Interrupt 0 (INT0) - to interrupt the device and start caunting the sensor's wave length
+
+PINs on the ports were therefore assigned as follows:
+
+- PORTA:
+   - PA0 - trigger for the sensor
+   - PA2 - output for the buzzer
+- PORTD:
+   - PD0 - (INT0) output from the sensor
+   
+In order to use interrupts,
+; i.e. to transform the artefacts of the analysis into a model that can be implemented. The design section is relevant for the programmer, whereas the analysis is relevant for the stakeholder.
 
 
 Elements that may be relevant in this section:
