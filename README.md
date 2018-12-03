@@ -45,7 +45,7 @@ __Abstract__
 @ !--------Mihai Tirtara -------!
 
    Nowadays with the advancement of technology people with special needs can significantly improve their life quality. By applying the current technologies the purpose of this project was to develop a "Blind Stick"  for persons with debilitating vision issues. A device which will emit sounds with differrent frequency depending on distance to the object. 
-   The development cycle which was followed contains 4  distinct sections : Analysis, Design, Implementation and Testing, each of them being explained in greater details in the later parts of the report.Furthermore in the next topic it is presented the list of requirements.
+   The development cycle which was followed contains 4  distinct sections : Analysis, Design, Implementation and Testing, each of them being explained in greater details in the later parts of the report. Furthermore in the next topic it is presented the list of requirements.
 # __2	Requirements__
 
 ### __2.1 Functional requirements__
@@ -95,7 +95,19 @@ The design of the device has begun with defining the needed components for build
 - AVR ATmega2560 microcontroller
 - cables.
 
-The decision to use interrupts (for avr input from sensor) and timers partly define the final components connections, as well as the, PINs in the controller that the components have to be connected to. The decision has been made to use:
+The idea of the device work at this point is to 
+1. Send an impulse to the ultrasonic sensor, 
+2. Wait for the sensor's echo sygnal, 
+3. Start the Timer/Counter at the rising edge of the sygnal
+4. Increment the T/C as long as the sygnal is high
+5. Read the T/C counter when the input goes low
+6. Stop the T/C
+7. Send high on the output pin for the buzzer 
+9. Delay the sygnal high based on the T/C counter value
+10. Delay the sygnal low based on the T/C counter value
+11. Do it again
+
+The decision to use interrupts (for avr input from sensor) and timers partly define the final components connections, as well as the PINs in the controller that the components has to be connected to. The decision to use the following has been made:
 - Timer1/Counter - for counting the wave length of the sensor
 - External Interrupt 0 (INT0) - to interrupt the device and start caunting the sensor's wave length
 
@@ -105,26 +117,10 @@ PINs on the ports were therefore assigned as follows:
    - PA0 - trigger for the sensor
    - PA2 - output for the buzzer
 - PORTD:
-   - PD0 - (INT0) output from the sensor
+   - PD0 - output from the sensor, this PIN is specific to the interrupt INT0
    
-In order to use interrupts,
-; i.e. to transform the artefacts of the analysis into a model that can be implemented. The design section is relevant for the programmer, whereas the analysis is relevant for the stakeholder.
-
-
-Elements that may be relevant in this section:
-
-*Architecture: Find architecture patterns here (Leszek Maciaszek 2004, chap.9).
-*Technologies: Describe technologies used, also alternative technologies. Argue for choice of technology according to the project aim.
-*Design Patterns: Describe which design patterns (GoF (Gamma et al. 2002) etc.) you are using and why.
-*Class Diagrams
-*Interaction Diagrams
-*UI design choices
-*Data models, persistence, etc.
-
-
-You must explain all diagrams in the report. These diagrams including descriptions are the blueprints for the implementation.
-Hint: One way to figure out which objects/classes are needed in the design is to apply the General Responsibility Assignment Software Patterns/principles (GRASP) (Larman 2004, chap.17).
-Hint: Consider how to design your system to make it testable.
+In order to use interrupts, one of the pins with alternative functions had to be used, which in this case is PD0.
+ 
 
 
 # __5	Implementation__
