@@ -153,15 +153,14 @@ The purpose of the test section is to document the result of your testing; to ve
 
 # __7	Results and Discussion__
 
-The purpose of the results and discussion section is to present the outcome and achieved results of the project.
-
+The result of the project is a working device with "Blind Stick" functionalities. The device responds with changing frequency of the buzzer depending on the distance from the object. The project has been done in aprox. 1,5 months.
+The device is fulfilling the requirements, but does not entirely respresent the initial idea.
+The idea for the device was not to emit sounds when the object is further than 50 centimeters, which is not properly implemented.
+Apart from that, the device is fully functional as can be seen in Test chapter.
 
 # __8	Conclusions__
 
-The purpose of the conclusion section is to compile the results from each section in the report. What is the conclusion? Did the project fulfil the requirements? Etc.
-
-
-You can only comment on report contents, no new topics or content can be introduced in this section.
+To conclude all the previosuly highlighted topics specify the device and all the steps that were followed to build it.The proccess pattern was followed by starting with Analysis part, where the problem was analyzed and the diagrams were sketched for the further development steps. Next we took the Design part, where we relied on the anylised data and made the decisions about how the device should be implemented. In the Implementation part, the device was built and then tested.
 
 
 
@@ -178,18 +177,15 @@ Suggest how the project could be improved or made ready for production. Discuss 
 
 # __10	Sources of information__
 
-@ !-------- Michal CIebien -------!
 
+Author	Muhammad Ali Mazidi
+Year published: 2010
+Book title:	The AVR microcontroller and embedded systems
 
-# __11	Appendices__
+Datasheets:
 
-The purpose of your appendices is to provide extra information to the expert reader. List the appendices in order of mention.
-Examples of appendices
-•	Project Description
-•	User Guide
-•	Source code – source documentation
-•	Diagrams
-•	Data sheets
-•	Etc.
+Ultrasonic Sensor HC-SR04 - https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+AVR ATmega2560 - http://ww1.microchip.com/downloads/en/devicedoc/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf
+AVR ATmega2560 Instruction Manual - http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
 
 
