@@ -25,12 +25,11 @@
 4. Design	
 5. Implementation	
 6. Test	
-   6.1Test Specifications	
 7. Results and Discussion	
 8. Conclusions
 9. Project future	
 10. Sources of information	
-11. Appendices	
+
 
 
 
@@ -41,8 +40,6 @@ __Abstract__
 
 
 # __1 Introduction__
-
-@ !--------Mihai Tirtara -------!
 
    Nowadays with the advancement of technology people with special needs can significantly improve their life quality. By applying the current technologies the purpose of this project was to develop a "Blind Stick"  for persons with debilitating vision issues. A device which will emit sounds with differrent frequency depending on distance to the object. 
    The development cycle which was followed contains 4  distinct sections : Analysis, Design, Implementation and Testing, each of them being explained in greater details in the later parts of the report. Furthermore in the next topic it is presented the list of requirements.
@@ -55,7 +52,7 @@ __Abstract__
 
 ### __2.2	Non-Functional Requirements__
 
-1.	The device should be built using Arduino AVR and basic components
+1.	The device should be built using Arduino AVR (ATmega2560) and basic components
 2.	The device should be programmed using Assembly language
 
 # __3	Analysis__
@@ -84,7 +81,6 @@ After getting into the first state, Wait For Trigger, the Sensor waits until it 
 
 # __4	Design__
 
-@ !--------Michal Ciebien -------!
 
 The device design was based on previously made diagrams and discussions. The design was split into different parts which will further be highlited in this chapter. 
 
@@ -95,7 +91,8 @@ The design of the device has begun with defining the needed components for build
 - AVR ATmega2560 microcontroller
 - cables.
 
-The idea of the device work at this point is to 
+**The idea of the device work at this point is to: **
+
 1. Send an impulse to the ultrasonic sensor, 
 2. Wait for the sensor's echo sygnal, 
 3. Start the Timer/Counter at the rising edge of the sygnal
@@ -111,7 +108,7 @@ The decision to use interrupts (for avr input from sensor) and timers partly def
 - Timer1/Counter - for counting the wave length of the sensor
 - External Interrupt 0 (INT0) - to interrupt the device and start caunting the sensor's wave length
 
-PINs on the ports were therefore assigned as follows:
+**PINs on the ports were therefore assigned as follows:**
 
 - PORTA:
    - PA0 - trigger for the sensor
@@ -119,13 +116,22 @@ PINs on the ports were therefore assigned as follows:
 - PORTD:
    - PD0 - output from the sensor, this PIN is specific to the interrupt INT0
    
-In order to use interrupts, one of the pins with alternative functions had to be used, which in this case is PD0.
+In order to use interrupts, one of the pins with alternative functions has to be used, which in this case is PD0.
+
+The technologies and software that were used in the project:
+- AVR Assembly langugage
+- Atmel Studio 7 IDE
  
 
 
 # __5	Implementation__
 
 @ !-------- Michal Ciebien -------!
+
+The device was fully implemented in AVR Assembly language, as was stated in the previous section. The following chapter will present the intresting code snippets as well as showcase some of the crucial time calculations in larger detail.
+
+The AVR ATmega2560 
+
 The purpose of the implementation section is to explain interesting code snippets. An idea is to explain the complete path through your system from UI to database etc.
 Remember that your implementation must be consistent with your design (Larman 2004, chap.20).
 Which standard libraries are used? How are design patterns implemented, etc.
