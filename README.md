@@ -126,8 +126,6 @@ The technologies and software that were used in the project:
 
 # __5	Implementation__
 
-@ !-------- Michal Ciebien -------!
-
 The device was fully implemented in AVR Assembly language, as was stated in the previous section. The following chapter will present the intresting code snippets as well as showcase some of the crucial time calculations in larger detail.
 
 The AVR ATmega2560 runs with 16MHz CPU. That means that each clock cycle takes ~62.5 nS.
