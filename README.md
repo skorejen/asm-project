@@ -99,7 +99,7 @@ The design of the device has begun with defining the needed components for build
 4. Increment the T/C as long as the sygnal is high
 5. Read the T/C counter when the input goes low
 6. Stop the T/C
-7. Send high on the output pin for the buzzer 
+7. Send high on the output pin for the buzzer
 9. Delay the sygnal high based on the T/C counter value
 10. Delay the sygnal low based on the T/C counter value
 11. Do it again
@@ -137,18 +137,60 @@ From the Ultrasonic Sensor Datasheet, we can see that the formula for the echo h
 *high_time ~= 0.02352941s ~ 23529 uS
 
 Using the 16-bit Timer, we can store max. 16-bit numbers, which is 65535, and from the calculation 
-*max(high_time)/one_clock_cycle_time = 0.0235294nS/62.5uS = 3763200*
+*max(high_time)/one_clock_cycle_time = 235294 uS/62.5 nS = 3763200*
 we can see that we would need much larger maximum storage. That's why the decision was made to use the counter with /1024 prescaling in order to count up to that number.
 After prescaling we can see that the max number is 3675, which can fit into 16-bit register.
+We can divide that number by 8 to get the number that is neccesary to achieve the 0.5 meters buzzing border (after which the buzzer doesn't not emit sound buzzing).
 
 
+```assembly
+int_detect_wave_from_sensor:
+	ldi r16, 0 ; 1
+	out PORTA, r16 // clear PORTA completely
 
-That gives us 
+	ldi r20, 0b00000000 ; normal mode, int clk;
+	sts TCCR1A, r20		
+	ldi r20, 0b00000011 ; prescaler /1024
+	sts TCCR1B, r20
+	ldi r20, 0
+	sts TCCR1C, r20
 
-The purpose of the implementation section is to explain interesting code snippets. An idea is to explain the complete path through your system from UI to database etc.
-Remember that your implementation must be consistent with your design (Larman 2004, chap.20).
-Which standard libraries are used? How are design patterns implemented, etc.
-Hint: Implement your code in a testable manner.
+	loop_check_PA0:
+
+	in r20, PIND
+	sbrc r20, PD0
+	rjmp loop_check_PA0 ; if PIND goes LOW, so the sensor stops it's pulse, buzz the buzzer
+
+	lds r25, TCNT1L
+	lds r26, TCNT1H
+```
+
+The above code snippet shows how the clock starts(TCCR1B), and how the value of high time is stored.
+This value is then used in the delay functions to differ the frequency of the buzzing, by enlargering the delay loops.
+The above function is called from an interrupt vector placed at 0x02 memory address
+
+```assembly
+ .ORG 0x02 ; vector interrupt for INT0 = 0x02
+	   call int_detect_wave_from_sensor
+}
+```
+  
+that happens after the high edge from the sensor is detected - that can happen only in the following main loop:
+```assembly
+;----- start main
+	main :
+	ldi r16, 1<<PA0 ; 1
+	out PORTA, r16 // Send HIGH on PA0 to start the detect and PROBABLY start interrupt
+	ldi r16, 0
+	out PORTA, r16 // clear the PA0
+	clr r16
+
+	call delay_detection_60ms
+
+    rjmp main
+	; ----- end main
+```
+In the above snippet there is also *delay_detection_60ms* function called, that is required for the accurate sensor work (as mentioned in datasheet).
  
 # __6	Test__
 
