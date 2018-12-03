@@ -164,7 +164,6 @@ Suggest how the project could be improved or made ready for production. Discuss 
 
 # __10	Sources of information__
 
-
 Author	Muhammad Ali Mazidi
 Year published: 2010
 Book title:	The AVR microcontroller and embedded systems
@@ -174,5 +173,5 @@ Datasheets:
 Ultrasonic Sensor HC-SR04 - https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
 AVR ATmega2560 - http://ww1.microchip.com/downloads/en/devicedoc/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf
 AVR ATmega2560 Instruction Manual - http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
-
+AVR ATmega2560 Schematic - https://www.arduino.cc/en/uploads/Main/arduino-mega2560_R3-sch.pdf
 
