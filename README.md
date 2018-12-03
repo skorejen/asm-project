@@ -89,12 +89,12 @@ The design of the device has begun with defining the needed components for build
 - Ultrasonic Ranging Module HC - SR04
 - Breadboard
 - AVR ATmega2560 microcontroller
-- cables.
+- cables
 
-**The idea of the device work at this point is to: **
+**The idea of the device work at this point is to:**
 
-1. Send an impulse to the ultrasonic sensor, 
-2. Wait for the sensor's echo sygnal, 
+1. Send an impulse to the ultrasonic sensor
+2. Wait for the sensor's echo sygnal
 3. Start the Timer/Counter at the rising edge of the sygnal
 4. Increment the T/C as long as the sygnal is high
 5. Read the T/C counter when the input goes low
@@ -130,7 +130,20 @@ The technologies and software that were used in the project:
 
 The device was fully implemented in AVR Assembly language, as was stated in the previous section. The following chapter will present the intresting code snippets as well as showcase some of the crucial time calculations in larger detail.
 
-The AVR ATmega2560 
+The AVR ATmega2560 runs with 16MHz CPU. That means that each clock cycle takes ~62.5 nS.
+From the Ultrasonic Sensor Datasheet, we can see that the formula for the echo high-time is as follows:
+*distance (m) = high_time (s) x 340m/s/2* , after simplyfing
+*high_time (s) = distance(m) / (340m/s /2)* , which gives us
+*high_time ~= 0.02352941s ~ 23529 uS
+
+Using the 16-bit Timer, we can store max. 16-bit numbers, which is 65535, and from the calculation 
+*max(high_time)/one_clock_cycle_time = 0.0235294nS/62.5uS = 3763200*
+we can see that we would need much larger maximum storage. That's why the decision was made to use the counter with /1024 prescaling in order to count up to that number.
+After prescaling we can see that the max number is 3675, which can fit into 16-bit register.
+
+
+
+That gives us 
 
 The purpose of the implementation section is to explain interesting code snippets. An idea is to explain the complete path through your system from UI to database etc.
 Remember that your implementation must be consistent with your design (Larman 2004, chap.20).
