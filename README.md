@@ -59,8 +59,8 @@ __Abstract__
 
 @ !--------Cristian Cuba -------!
 
-![Alt Text])(images/T.png)
-![Alt Text])(images/TT.png)
+![Alt Text](images/T.png)
+![Alt Text](images/TT.png)
 
 
 # __3. 1.1	State-machine diagrams__
