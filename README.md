@@ -36,7 +36,7 @@
 
 __Abstract__
 
-*This project involves a detailed introduction through the development stages of the Distance detector, that involves audio* *feedack. The process started with making the concept of how our device is going to work, based on our working kit which is* *adruino starting pack. The next step was to write a requirements list and optimize it regarding ATMEGA 2560 possibilities.* *Based on our requirements list we made our diagrams so we can rely on them to write the code which was written in AVR* *assembly. After testing our code and analysing its behaviour we tested every possible overflow or errors based on* *requirements list, we edited it so we do not get out of reqiorements bounds.*
+*This project involves a detailed introduction through the development stages of the Distance detector, that involves audio* *feedback. The process started with making the concept of how our device is going to work, based on our working kit which is* *arduino starting pack. The next step was to write a requirements list and optimize it regarding ATMEGA 2560 possibilities.* *Based on our requirements list we made our diagrams so we can rely on them to write the code which was written in AVR* *assembly. After testing our code and analysing its behaviour we tested every possible overflow or errors based on* *requirements list, we edited it so we do not get out of requirements bounds.*
 
 
 # __1 Introduction__
@@ -94,19 +94,19 @@ The design of the device has begun with defining the needed components for build
 **The idea of the device work at this point is to:**
 
 1. Send an impulse to the ultrasonic sensor
-2. Wait for the sensor's echo sygnal
-3. Start the Timer/Counter at the rising edge of the sygnal
-4. Increment the T/C as long as the sygnal is high
+2. Wait for the sensor's echo signal
+3. Start the Timer/Counter at the rising edge of the signal
+4. Increment the T/C as long as the signal is high
 5. Read the T/C counter when the input goes low
 6. Stop the T/C
 7. Send high on the output pin for the buzzer
-9. Delay the sygnal high based on the T/C counter value
-10. Delay the sygnal low based on the T/C counter value
+9. Delay the signal high based on the T/C counter value
+10. Delay the signal low based on the T/C counter value
 11. Do it again
 
 The decision to use interrupts (for avr input from sensor) and timers partly define the final components connections, as well as the PINs in the controller that the components has to be connected to. The decision to use the following has been made:
 - Timer1/Counter - for counting the wave length of the sensor
-- External Interrupt 0 (INT0) - to interrupt the device and start caunting the sensor's wave length
+- External Interrupt 0 (INT0) - to interrupt the device and start counting the sensor's wave length
 
 **PINs on the ports were therefore assigned as follows:**
 
@@ -206,7 +206,7 @@ Apart from that, the device is fully functional as can be seen in Test chapter.
 
 # __8	Conclusions__
 
-To conclude all the previosuly highlighted topics specify the device and all the steps that were followed to build it.The proccess pattern was followed by starting with Analysis part, where the problem was analyzed and the diagrams were sketched for the further development steps. Next we took the Design part, where we relied on the anylised data and made the decisions about how the device should be implemented. In the Implementation part, the device was built and then tested.
+To conclude all the previosuly highlighted topics specify the device and all the steps that were followed to build it.The proccess pattern was followed by starting with Analysis part, where the problem was analyzed and the diagrams were sketched for the further development steps. Next we took the Design part, where we relied on the analysed data and made the decisions about how the device should be implemented. In the Implementation part, the device was built and then tested.
 
 
 
