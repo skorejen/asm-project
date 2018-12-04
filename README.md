@@ -140,7 +140,7 @@ Using the 16-bit Timer, we can store max. 16-bit numbers, which is 65535, and fr
 *max_dist_number_to_store_by_the_timer_no_prescale = max(high_time)/one_clock_cycle_time = 235294 uS/62.5 nS = 3763200*
 we can see that we would need much larger maximum storage. That's why the decision was made to use the counter with /1024 prescaling in order to be able to store the high_time value in the register.
 After prescaling we can see that the max number is now *max_dist_number_to_store_by_the_timer_1024_prescale = 3763200/1024 = 3675*, which can fit into a 16-bit register.
-We can divide that number by 8 to get the number that is neccesary to achieve the 0.5 meters buzzing border (after which the buzzer doesn't not emit sound buzzing), which is around 459.
+We can divide that number by 8 to get the number that is neccesary to achieve the 0.5 meters buzzing border (after which the buzzer does not emit sound), which is around 459.
 
 
 ```assembly
