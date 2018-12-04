@@ -57,10 +57,6 @@ __Abstract__
 
 # __3	Analysis__
 
-![Alt Text](images/TT.png)
-*Figure 1 Activity Diagram*
-
-The above activity diagram represents the concept of how our device should behave. When the device is turned on, the first action is to send a pulse to the the sensor, after which in case there is not response response from the sensor the device exits the iteration of the loop. If the response is send, the device checks response high time from the moment the rising edge was detected until it goes low. Using the formula for converting time into distance we get a precise distance between the sensor and the object. Based on that distance either we get back to the first state of sending the signal to the sensor, if distance is more then 50 centimeters, or we send a signal to the buzzer. After the whole procces the device is going to repeat the above actions again.
 
 # __3. 1.1	State-machine diagrams__
 
@@ -68,7 +64,7 @@ We start our analysis with discussing the workflow of the machine.
 
 ![Alt Text](images/Picture1.png)
 
-            Figure 2 Distance Detector UML State-Machine Diagram
+            Figure 1 Distance Detector UML State-Machine Diagram
             
 The above diagram shows us the paths device can take after it’s turned on. It starts with the Detecting state, which is responsible for detection initiations. The following state is Check Distance, which verifies the distance between the object and device. If the distance is bigger than fifty centimetres, the state goes back to Detecting. On the other hand if it is smaller than fifty centimetres the state changes to Emit Sound. 
 
@@ -76,9 +72,14 @@ We then dive more deeply into the first of the above states – Detecting.
 
 ![Alt Text](images/Picture2.png)
 
-            Figure 3 Ultrasonic Sensor UML State-Machine Diagram
+            Figure 2 Ultrasonic Sensor UML State-Machine Diagram
             
 After getting into the first state, Wait For Trigger, the Sensor waits until it gets a pulse of at least 10uS. After receiving the triggering pulse, the state changes to Send Pulse, which will send a ultrasonic pulse and wait for the response. If the pulse doesn’t comes back, the state comes back to Wait For Trigger, otherwise it forwards to Out High For Time, which will send a high level output for the duration of time from sending ultrasonic pulse to returning.
+
+![Alt Text](images/TT.png)
+
+	`Figure 3 Figure 3 AVR Activity Diagram`
+The above activity diagram represents the concept of how our device should behave. When the device is turned on, the first action is to send a pulse to the the sensor, after which in case there is not response response from the sensor the device exits the iteration of the loop. If the response is send, the device checks response high time from the moment the rising edge was detected until it goes low. Using the formula for converting time into distance we get a precise distance between the sensor and the object. Based on that distance either we get back to the first state of sending the signal to the sensor, if distance is more then 50 centimeters, or we send a signal to the buzzer. After the whole procces the device is going to repeat the above actions again.
 
 # __4	Design__
 
