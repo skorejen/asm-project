@@ -191,7 +191,7 @@ that happens after the high edge from the sensor is detected - that can happen o
 In the above snippet there is also *delay_detection_60ms* function called, that is required for the accurate sensor work (as mentioned in datasheet).
  
 # __6	Test__
-
+if it works, then im cool
 For assessing the correctness of work the Black-box testing method was used.
 
 Test cases:
