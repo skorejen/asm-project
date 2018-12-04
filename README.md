@@ -60,12 +60,7 @@ __Abstract__
 ![Alt Text](images/TT.png)
 *Figure 1 Activity Diagram*
 
-This activity diagram represents the concept of how our program will behave based on some rules applied by us. When the device is turned on, the first action is to check the senson input, in case we do not recive anything we remain in that state until the input is recived. If the input is recived the board checks response time from the moment when the output was send until the input came. Using the formula for converting time into distance we get a precise distance between the sensor and the object which occurs. Based on distance which we recived either we get back to the first state of sending the signal to the sensor, if distance is less then 50 centimeters, or we send a signal to the buzzer. After the whole procces our programs is going to repeat that same actions again.
-		
-
-
-
-
+The above activity diagram represents the concept of how our device should behave. When the device is turned on, the first action is to send a pulse to the the sensor, after which in case there is not response response from the sensor the device exits the iteration of the loop. If the response is send, the device checks response high time from the moment the rising edge was detected until it goes low. Using the formula for converting time into distance we get a precise distance between the sensor and the object. Based on that distance either we get back to the first state of sending the signal to the sensor, if distance is more then 50 centimeters, or we send a signal to the buzzer. After the whole procces the device is going to repeat the above actions again.
 
 # __3. 1.1	State-machine diagrams__
 
