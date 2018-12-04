@@ -78,7 +78,7 @@ After getting into the first state, Wait For Trigger, the Sensor waits until it 
 
 ![Alt Text](images/TT.png)
 
-	`Figure 3 Figure 3 AVR Activity Diagram`
+	Figure 3 Figure 3 AVR Activity Diagram
 The above activity diagram represents the concept of how our device should behave. When the device is turned on, the first action is to send a pulse to the the sensor, after which in case there is not response response from the sensor the device exits the iteration of the loop. If the response is send, the device checks response high time from the moment the rising edge was detected until it goes low. Using the formula for converting time into distance we get a precise distance between the sensor and the object. Based on that distance either we get back to the first state of sending the signal to the sensor, if distance is more then 50 centimeters, or we send a signal to the buzzer. After the whole procces the device is going to repeat the above actions again.
 
 # __4	Design__
