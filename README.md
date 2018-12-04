@@ -60,7 +60,16 @@ __Abstract__
 @ !--------Cristian Cuba -------!
 
 ![Alt Text](images/T.png)
+		Figure 1 State-Machine Diagram
+
+When the device is turned on, the first action is to check the senson input, in case we do not recive anything we remain in that state until the input is recived. If the input is recived the board checks response time from the moment when the output was send until the input came. Using the formula for converting time into distance we get a precise distance between the sensor and the object which occurs. Based on distance which we recived either we get back to the first state of sending the signal to the sensor, if distance is less then 50 centimeters, or we send a signal to the buzzer after what we send the signal to sensor again.
+
 ![Alt Text](images/TT.png)
+		Figure 2 Activity Diagram
+		
+
+
+
 
 
 # __3. 1.1	State-machine diagrams__
@@ -69,7 +78,7 @@ We start our analysis with discussing the workflow of the machine.
 
 ![Alt Text](images/Picture1.png)
 
-            Figure 1 Distance Detector UML State-Machine Diagram
+            Figure 3 Distance Detector UML State-Machine Diagram
             
 The above diagram shows us the paths device can take after it’s turned on. It starts with the Detecting state, which is responsible for detection initiations. The following state is Check Distance, which verifies the distance between the object and device. If the distance is bigger than fifty centimetres, the state goes back to Detecting. On the other hand if it is smaller than fifty centimetres the state changes to Emit Sound. 
 
@@ -77,7 +86,7 @@ We then dive more deeply into the first of the above states – Detecting.
 
 ![Alt Text](images/Picture2.png)
 
-            Figure 2 Ultrasonic Sensor UML State-Machine Diagram
+            Figure 4 Ultrasonic Sensor UML State-Machine Diagram
             
 After getting into the first state, Wait For Trigger, the Sensor waits until it gets a pulse of at least 10uS. After receiving the triggering pulse, the state changes to Send Pulse, which will send a ultrasonic pulse and wait for the response. If the pulse doesn’t comes back, the state comes back to Wait For Trigger, otherwise it forwards to Out High For Time, which will send a high level output for the duration of time from sending ultrasonic pulse to returning.
 
