@@ -192,9 +192,16 @@ In the above snippet there is also *delay_detection_60ms* function called, that 
  
 # __6	Test__
 
-@ !-------- Nikita Roskovs -------!
+For assessing the correctness of work the Black-box testing method was used.
 
-The purpose of the test section is to document the result of your testing; to verify if the content of the requirements section has been fulfilled. How is the system tested, which strategy has been used; e.g. White Box (Unit Test), Black Box, etc.
+Test cases:
+	
+	1. Object is being placed in a ultrasonic sensor range of vision. Result: Buzzer emits the sound
+	
+       	2. Object located in sensors range is moving closer to the sensor. Result: Frequency of sound emitted is increasing.
+	2.1 Object located in sensors range is moving farther from the sensor. Result: Frequency of sound emitted is decreasing.
+	
+All test cases have given the expected result. Requirements set were fulfilled	
 
 
 # __7	Results and Discussion__
@@ -212,13 +219,7 @@ To conclude all the previosuly highlighted topics specify the device and all the
 
 # __9	Project future__
 
-@ !-------- Nikita Roskovs -------!
-
-Reflect on your project from a technical viewpoint and describe what you would change if you could.
-
-
-Suggest how the project could be improved or made ready for production. Discuss scalability, suggest possible spin offs, what is needed, missing, etc.?
-
+The first step of improving the functionality of device would be completing implementation of the sensors activity area, so the device would stop emitting sounds if the object is located farther then 50 centimeters from the sensor even if the object itself will still be in sensors range of vision.
 
 
 # __10	Sources of information__
